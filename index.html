@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font Family buttom  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <!--     font Family body        -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex&display=swap" rel="stylesheet">
+    <!-- mi css -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <title>Gym Kairos</title>
+</head>
+
+<body>
+    <nav class="navbar container-fluid botonCss">
+        <button class="btn btnClaro">
+            <h4><i class="bi bi-brightness-high icon_sun"></i></h4>
+            Modo claro
+        </button>
+
+        <button class="btn btnOscuro">
+            <h4><i class="bi bi-moon icon_moon"></i></h4>
+            Modo Oscuro
+        </button>
+    </nav>
+
+    <nav>
+        <div class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Buscador por Mercado Libre</button>
+        </div>
+    </nav>
+    <hr>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+
+
+            <div class="container">
+                <h1 class="text-center text-white bg-dark">Cuotas de alumnos</h1>
+                <form id="formulario" class="container">
+                    <span class="input-group-text">D.N.I. del Alumno</span>
+                    <input id="id" class="form-control text-center" type="number" placeholder="D.N.I.">
+                    <span class="input-group-text">Nombre del Alumno</span>
+                    <input id="nombres" class="form-control text-center" type="text" placeholder="Nombre">
+                    <span class="input-group-text">Apellido del Alumno</span>
+                    <input id="apellidos" class="form-control text-center" type="text" placeholder="Apellido">
+                    <span class="input-group-text">Edad del Alumno</span>
+                    <input id="edad" class="form-control text-center" type="number" placeholder="Edad">
+                    <span class="input-group-text">Monto pagado</span>
+                    <input id="monto" class="form-control text-center" type="number" placeholder="$$">
+
+                    <input id="btnSaveStudent" type="submit" value="guardar"
+                        class="btn btn-primary mb-3 form-control text-white bg-dark">
+                </form>
+                <div id="error"></div>
+            </div>
+            <!-- buscador -->
+            <div class="input-group rounded container">
+                <input id="txtFiltro" type="search" class="form-control rounded text-center"
+                    placeholder="Buscar por nombre!" aria-label="Search" aria-describedby="search-addon" />
+            </div>
+
+            <div class="container">
+                <h2 class="text-center text-white bg-dark">Lista alumnos</h2>
+                <table class="table  table-dark table-hover table-striped container ocultartabla" id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>D.N.I.</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>Monto</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="container">
+                <button id="btnOcultar" type="button" class="btn btn-primary mb-3 form-control text-white bg-dark"
+                    value="Actualizar">Ver o Ocultar</button>
+            </div>
+            <div class="container">
+                <button id="btnDeleteStudent" type="button"
+                    class="btn btn-primary mb-3 form-control text-white bg-dark">Borrar
+                    Todo!</button>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <div class="container ">
+                <form id="miForm">
+                <span class="input-group-text">buscar Articulo por MERCADO LIBRE</span>
+                <input id="Buscardor" class="form-control text-center" type="text" placeholder="Buscar">
+                <input id="btnBuscar" type="submit" value="buscar"
+                class="btn btn-primary mb-3 form-control text-white bg-dark">
+               
+                </form>
+               
+                <section>
+                <input  type="submit" value="Borrar busqueda" id="borrarbusqueda"
+                class="btn btn-primary mb-3 form-control text-white bg-dark">
+                </section>
+                <section id="pintar" class="contenedor row"></section>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="py-5 bg-dark ">
+        <div class="container ">
+            <div class="small text-center text-muted">Copyright © 2021- TABORDA EMMANUEL</div>
+        </div><!-- https://www.linkedin.com/in/emmanuel-taborda-a08347211/-->
+    </footer>
+
+    <!-- Jquery -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Script Mios -->
+    <script src="assets/js/validar.js"></script>
+    <script src="assets/js/estilos.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/archivo.js"></script>
+    <script src="assets/js/ajax.js"></script>
+    <!-- Script Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

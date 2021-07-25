@@ -1,0 +1,61 @@
+body {
+    font-family: 'Caudex', serif;
+}
+#formulario span{
+    font-size:22px;
+}
+.botonCss{
+    font-family: 'Caveat', cursive;
+    
+
+}
+
+
+.card {
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+
+    background-color:grey !important;
+}
+.nav-link {
+    font-size:22px;
+    color: #9DBD42   !important;}
+
+
+    html {
+        min-height: 100%;
+        position: relative;
+      }
+      body {
+        margin: 0;
+        margin-bottom: 100px;
+      }
+      footer {
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        color: white;
+      } 
+
+      
